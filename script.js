@@ -21,7 +21,7 @@ let activeFade = null;
 
 let currentStep = 0;
 let currentItemEl = null;
-let introPhase = 'idle'; // 'idle' | 'bouquet' | 'intro' | 'waitingClick' | 'entering'
+let introPhase = 'idle';
 let stepTimer = null;
 let clickHandlerActive = false;
 
@@ -203,17 +203,58 @@ function startMusic() {
   audio.loop = true;
   audio.volume = 0.0;
 
-  audio.play()
-    .then(() => fadeVolumeTo(0.07, 2500))
-    .catch(() => {});
+  // Tenta tocar automaticamente
+  const playPromise = audio.play();
+  
+  if (playPromise !== undefined) {
+    playPromise
+      .then(() => {
+        // Autoplay funcionou!
+        fadeVolumeTo(0.07, 2500);
+        updateMusicUI(true);
+      })
+      .catch(() => {
+        // Autoplay bloqueado - aguarda interação do usuário
+        console.log("Autoplay bloqueado, aguardando interação...");
+        audio.volume = 0;
+        
+        // Cria um evento único para iniciar a música no primeiro toque/clique
+        const startAudioOnInteraction = function() {
+          if (musicStarted && audioInstance) {
+            audio.play()
+              .then(() => {
+                fadeVolumeTo(0.07, 2500);
+                updateMusicUI(true);
+              })
+              .catch(e => console.log("Ainda não foi possível tocar:", e));
+          }
+          // Remove os listeners após o primeiro toque
+          document.removeEventListener('click', startAudioOnInteraction);
+          document.removeEventListener('touchstart', startAudioOnInteraction);
+        };
+        
+        document.addEventListener('click', startAudioOnInteraction);
+        document.addEventListener('touchstart', startAudioOnInteraction);
+      });
+  }
+  
+  updateMusicUI(true);
+}
 
-  isPlaying = true;
+function updateMusicUI(isPlayingState) {
+  isPlaying = isPlayingState;
   const btn = document.getElementById('playBtn');
   const cover = document.getElementById('musicCover');
   const player = document.getElementById('musicPlayer');
-  if (btn) btn.textContent = '⏸';
-  if (cover) cover.classList.add('playing');
-  if (player) player.classList.add('playing');
+  if (btn) btn.textContent = isPlayingState ? '⏸' : '▶';
+  if (cover) {
+    if (isPlayingState) cover.classList.add('playing');
+    else cover.classList.remove('playing');
+  }
+  if (player) {
+    if (isPlayingState) player.classList.add('playing');
+    else player.classList.remove('playing');
+  }
 }
 
 function riseToEmotion() { fadeVolumeTo(0.32, 4500); }
@@ -397,11 +438,10 @@ function enterSite() {
 }
 
 // ============================================================
-//  CONFIGURAR VISIBILIDADE DAS IMAGENS (CORRIGIDO)
-//  NÃO SOBRESCREVE OS SRC EXISTENTES
+//  CONFIGURAR VISIBILIDADE DAS IMAGENS
 // ============================================================
 function setupImagesVisibility() {
-  // Hero image - verifica se existe e mostra
+  // Hero image
   const heroImg = document.getElementById('heroPhoto');
   const heroPlaceholder = document.getElementById('heroPlaceholder');
   if (heroImg && heroPlaceholder) {
@@ -420,7 +460,7 @@ function setupImagesVisibility() {
     }
   }
   
-  // Polaroids - verifica cada imagem individualmente
+  // Polaroids
   for (let i = 1; i <= 7; i++) {
     const img = document.getElementById(`polaroid${i}Img`);
     const placeholder = document.getElementById(`polaroid${i}Placeholder`);
@@ -585,9 +625,9 @@ function typeNextChar() {
 }
 
 // ============================================================
-//  COUNTER - ALTERE A DATA DO RELACIONAMENTO AQUI
+//  COUNTER - DATA CORRIGIDA: 18 de abril de 2025
 // ============================================================
-const startDate = new Date(2026, 3, 18);
+const startDate = new Date(2025, 3, 18);  // 18 de abril de 2025 - dia que nos conhecemos ♥
 
 function updateCounter() {
   const diff = Date.now() - startDate.getTime();
@@ -630,6 +670,33 @@ if (gallery) {
     gallery.scrollLeft = scrollLeft - (e.pageX - gallery.offsetLeft - startX) * 1.5;
   });
 }
+
+// ============================================================
+//  FORÇAR ÁUDIO NO CELULAR
+// ============================================================
+function forceMobileAudio() {
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
+  if (isMobile) {
+    const audio = document.getElementById('bgMusic');
+    if (audio) {
+      audio.load();
+      
+      const unlockAudio = function() {
+        if (audio.paused && musicStarted) {
+          audio.play().catch(e => console.log("Áudio iniciado por toque"));
+        }
+        document.removeEventListener('touchstart', unlockAudio);
+        document.removeEventListener('click', unlockAudio);
+      };
+      
+      document.addEventListener('touchstart', unlockAudio);
+      document.addEventListener('click', unlockAudio);
+    }
+  }
+}
+
+forceMobileAudio();
 
 // ============================================================
 //  INICIALIZAÇÃO - COMEÇA AUTOMATICAMENTE
