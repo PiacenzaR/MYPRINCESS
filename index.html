@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Pra Você, Letícia ❤️</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,35 +12,33 @@
 <body>
 
 <!-- CUSTOM CURSOR -->
-<div class="cursor"      id="cursor"></div>
+<div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
 <!-- BACKGROUND PARTICLES -->
 <canvas id="particles-canvas"></canvas>
 
-<!-- AUDIO (substitua o src pelo arquivo da música) -->
+<!-- AUDIO -->
 <audio id="bgMusic" loop>
   <source src="alianca-tribalistas_[cut_171sec].mp3" type="audio/mpeg">
 </audio>
 
 <!-- ================================================
-     BOUQUET INTRO — duas tampas de flores abrindo
+     BOUQUET INTRO 
      ================================================ -->
 <div id="bouquetIntro">
-
-  <!-- Tampa esquerda -->
   <div class="flap flap-left" id="flapLeft">
     <div class="flap-inner">
-      <!-- Arranjo de flores SVG na tampa esquerda -->
       <div class="flower-bunch left-bunch">
-
         <div class="stem s1"></div>
         <div class="stem s2"></div>
         <div class="stem s3"></div>
         <div class="stem s4"></div>
         <div class="stem s5"></div>
+        <div class="stem s6"></div>
+        <div class="stem s7"></div>
+        <div class="stem s8"></div>
 
-        <!-- Rosas -->
         <svg class="fl fl-rose r1" viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg">
           <ellipse cx="30" cy="55" rx="4" ry="14" fill="#6b2737"/>
           <ellipse cx="30" cy="38" rx="12" ry="10" fill="#c9184a"/>
@@ -98,24 +96,68 @@
           <ellipse cx="30" cy="21" rx="5" ry="4" fill="#ffb3c1"/>
         </svg>
 
-        <!-- Folhinhas -->
+        <svg class="fl l3" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="30" cy="65" rx="3" ry="16" fill="#5a6e2a"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#fff0f6" transform="rotate(15,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#ffe0ec" transform="rotate(75,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#ffe0ec" transform="rotate(135,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#fff0f6" transform="rotate(195,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#ffe0ec" transform="rotate(255,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#ffe0ec" transform="rotate(315,30,35)"/>
+          <circle cx="30" cy="35" r="5" fill="#e8b0f8"/>
+          <line x1="30" y1="30" x2="30" y2="14" stroke="#c890e0" stroke-width="1.5"/>
+          <line x1="30" y1="30" x2="20" y2="16" stroke="#c890e0" stroke-width="1.5"/>
+          <line x1="30" y1="30" x2="40" y2="16" stroke="#c890e0" stroke-width="1.5"/>
+        </svg>
+
+        <svg class="fl r4" viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="30" cy="55" rx="4" ry="14" fill="#6b2737"/>
+          <ellipse cx="30" cy="38" rx="13" ry="11" fill="#b00020"/>
+          <ellipse cx="21" cy="33" rx="10" ry="8" fill="#cc1830" transform="rotate(-20,21,33)"/>
+          <ellipse cx="39" cy="33" rx="10" ry="8" fill="#cc1830" transform="rotate(20,39,33)"/>
+          <ellipse cx="30" cy="27" rx="9" ry="7" fill="#e63050"/>
+          <ellipse cx="23" cy="23" rx="7" ry="6" fill="#f84868" transform="rotate(-14,23,23)"/>
+          <ellipse cx="37" cy="23" rx="7" ry="6" fill="#f84868" transform="rotate(14,37,23)"/>
+          <ellipse cx="30" cy="18" rx="6" ry="5" fill="#ff7090"/>
+          <ellipse cx="30" cy="13" rx="4" ry="3" fill="#ffb0c8"/>
+        </svg>
+
+        <svg class="fl l4" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="30" cy="65" rx="3" ry="16" fill="#5a6e2a"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#fffafc" transform="rotate(45,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#ffe5f0" transform="rotate(105,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#ffe5f0" transform="rotate(165,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#fffafc" transform="rotate(225,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#ffe5f0" transform="rotate(285,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#ffe5f0" transform="rotate(345,30,35)"/>
+          <circle cx="30" cy="35" r="6" fill="#ffc8d8"/>
+          <line x1="30" y1="29" x2="30" y2="11" stroke="#f0a0b8" stroke-width="1.8"/>
+          <line x1="30" y1="29" x2="18" y2="14" stroke="#f0a0b8" stroke-width="1.6"/>
+          <line x1="30" y1="29" x2="42" y2="14" stroke="#f0a0b8" stroke-width="1.6"/>
+          <line x1="30" y1="29" x2="10" y2="23" stroke="#f0a0b8" stroke-width="1.3"/>
+          <line x1="30" y1="29" x2="50" y2="23" stroke="#f0a0b8" stroke-width="1.3"/>
+        </svg>
+
         <div class="leaf lf1"></div>
         <div class="leaf lf2"></div>
         <div class="leaf lf3"></div>
+        <div class="leaf lf4"></div>
+        <div class="leaf lf5"></div>
       </div>
     </div>
   </div>
 
-  <!-- Tampa direita (espelho) -->
   <div class="flap flap-right" id="flapRight">
     <div class="flap-inner">
       <div class="flower-bunch right-bunch">
-
         <div class="stem s1"></div>
         <div class="stem s2"></div>
         <div class="stem s3"></div>
         <div class="stem s4"></div>
         <div class="stem s5"></div>
+        <div class="stem s6"></div>
+        <div class="stem s7"></div>
+        <div class="stem s8"></div>
 
         <svg class="fl fl-rose r1" viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg">
           <ellipse cx="30" cy="55" rx="4" ry="14" fill="#6b2737"/>
@@ -174,34 +216,96 @@
           <ellipse cx="30" cy="21" rx="5" ry="4" fill="#ffb3c1"/>
         </svg>
 
+        <svg class="fl l3" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="30" cy="65" rx="3" ry="16" fill="#5a6e2a"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#fff0f6" transform="rotate(15,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#ffe0ec" transform="rotate(75,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#ffe0ec" transform="rotate(135,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#fff0f6" transform="rotate(195,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#ffe0ec" transform="rotate(255,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="18" fill="#ffe0ec" transform="rotate(315,30,35)"/>
+          <circle cx="30" cy="35" r="5" fill="#e8b0f8"/>
+          <line x1="30" y1="30" x2="30" y2="14" stroke="#c890e0" stroke-width="1.5"/>
+          <line x1="30" y1="30" x2="20" y2="16" stroke="#c890e0" stroke-width="1.5"/>
+          <line x1="30" y1="30" x2="40" y2="16" stroke="#c890e0" stroke-width="1.5"/>
+        </svg>
+
+        <svg class="fl r4" viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="30" cy="55" rx="4" ry="14" fill="#6b2737"/>
+          <ellipse cx="30" cy="38" rx="13" ry="11" fill="#b00020"/>
+          <ellipse cx="21" cy="33" rx="10" ry="8" fill="#cc1830" transform="rotate(-20,21,33)"/>
+          <ellipse cx="39" cy="33" rx="10" ry="8" fill="#cc1830" transform="rotate(20,39,33)"/>
+          <ellipse cx="30" cy="27" rx="9" ry="7" fill="#e63050"/>
+          <ellipse cx="23" cy="23" rx="7" ry="6" fill="#f84868" transform="rotate(-14,23,23)"/>
+          <ellipse cx="37" cy="23" rx="7" ry="6" fill="#f84868" transform="rotate(14,37,23)"/>
+          <ellipse cx="30" cy="18" rx="6" ry="5" fill="#ff7090"/>
+          <ellipse cx="30" cy="13" rx="4" ry="3" fill="#ffb0c8"/>
+        </svg>
+
+        <svg class="fl l4" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="30" cy="65" rx="3" ry="16" fill="#5a6e2a"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#fffafc" transform="rotate(45,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#ffe5f0" transform="rotate(105,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#ffe5f0" transform="rotate(165,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#fffafc" transform="rotate(225,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#ffe5f0" transform="rotate(285,30,35)"/>
+          <ellipse cx="30" cy="35" rx="5" ry="19" fill="#ffe5f0" transform="rotate(345,30,35)"/>
+          <circle cx="30" cy="35" r="6" fill="#ffc8d8"/>
+          <line x1="30" y1="29" x2="30" y2="11" stroke="#f0a0b8" stroke-width="1.8"/>
+          <line x1="30" y1="29" x2="18" y2="14" stroke="#f0a0b8" stroke-width="1.6"/>
+          <line x1="30" y1="29" x2="42" y2="14" stroke="#f0a0b8" stroke-width="1.6"/>
+          <line x1="30" y1="29" x2="10" y2="23" stroke="#f0a0b8" stroke-width="1.3"/>
+          <line x1="30" y1="29" x2="50" y2="23" stroke="#f0a0b8" stroke-width="1.3"/>
+        </svg>
+
         <div class="leaf lf1"></div>
         <div class="leaf lf2"></div>
         <div class="leaf lf3"></div>
+        <div class="leaf lf4"></div>
+        <div class="leaf lf5"></div>
       </div>
     </div>
   </div>
 
-  <!-- Mensagem revelada no centro -->
-  <div class="bouquet-message" id="bouquetMessage">
-    Oi, Letícia ❤️
-  </div>
-
+  <div class="bouquet-message" id="bouquetMessage"></div>
 </div>
+
 <!-- ================================================
-     INTRO CINEMATOGRÁFICA
+     INTRO CINEMATOGRÁFICA - SEQUÊNCIA CORRIGIDA
      ================================================ -->
 <div id="intro">
   <canvas id="intro-hearts-canvas"></canvas>
   <div class="intro-glow"></div>
 
+  <!-- MENSAGEM 1 -->
   <div class="intro-message intro-msg-1" id="msg1">Oi, Letícia ❤️</div>
-  <div class="intro-message intro-msg-2" id="msg2">Esse lugar foi feito pra você.</div>
-  <div class="intro-message intro-msg-3" id="msg3">Eu só queria te lembrar o quanto eu amo você.</div>
-  <div class="intro-message intro-msg-4" id="msg4">Obrigado por existir.</div>
-  <div class="intro-message intro-msg-5" id="msg5">Você mudou tudo dentro de mim.</div>
 
-  <div class="intro-continue" id="introContinue" onclick="enterSite()">
-    ↓ aperte para continuar
+  <!-- MENSAGEM 2 -->
+  <div class="intro-message intro-msg-2" id="msg2">Esse lugar foi feito pra você.</div>
+
+  <!-- MENSAGEM 3 -->
+  <div class="intro-message intro-msg-3" id="msg3">Cada momento com você é especial. ♥</div>
+
+  <!-- MENSAGEM 4 -->
+  <div class="intro-message intro-msg-4" id="msg4">Eu só queria te lembrar o quanto eu amo você.</div>
+
+  <!-- MENSAGEM 5 -->
+  <div class="intro-message intro-msg-5" id="msg5">Obrigado por existir.</div>
+
+  <!-- MEMÓRIA 3 - POLAROID (animação de subir) -->
+  <div class="intro-polaroid" id="polaroidMemory">
+    <div class="polaroid-frame">
+      <img class="polaroid-memory-img" id="memoryImg" src="img/teste!!!!!_processed.png" alt="Nosso momento especial">
+      <div class="polaroid-memory-caption">Você é meu lugar favorito. ♥</div>
+    </div>
+  </div>
+
+  <!-- MENSAGEM FINAL (aparece após polaroid desaparecer) -->
+  <div class="intro-message intro-msg-final" id="msgFinal">Você mudou tudo dentro de mim.</div>
+
+  <!-- CLIQUE PARA CONTINUAR (aparece com a msgFinal) -->
+  <div class="intro-continue" id="introContinue">
+    ↓ toque em qualquer lugar para continuar
   </div>
 </div>
 
@@ -210,11 +314,8 @@
      ================================================ -->
 <div id="main-site">
 
-  <!-- ── NAVEGAÇÃO ── -->
   <nav>
     <div class="nav-logo">Pra Você</div>
-
-    <!-- Desktop links -->
     <ul class="nav-links">
       <li><a href="#hero">Início</a></li>
       <li><a href="#memories">Momentos</a></li>
@@ -222,14 +323,11 @@
       <li><a href="#letter">Carta</a></li>
       <li><a href="#forever">Para sempre</a></li>
     </ul>
-
-    <!-- Hamburger (mobile) -->
     <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- Mobile dropdown menu -->
   <ul class="nav-mobile-menu" id="navMobileMenu">
     <li><a href="#hero">Início</a></li>
     <li><a href="#memories">Momentos</a></li>
@@ -238,7 +336,6 @@
     <li><a href="#forever">Para sempre</a></li>
   </ul>
 
-  <!-- ── MUSIC PLAYER ── -->
   <div class="music-player" id="musicPlayer">
     <div class="music-info">
       <div class="music-cover" id="musicCover">♪</div>
@@ -260,10 +357,8 @@
     </div>
   </div>
 
-  <!-- ── HERO ── -->
   <section id="hero" class="hero">
     <div class="hero-bg"></div>
-
     <div class="hero-content">
       <div class="hero-eyebrow">✦ esse lugar foi feito pra você ✦</div>
       <h1 class="hero-title">
@@ -277,15 +372,23 @@
     <div class="hero-photo-wrapper">
       <div class="hero-glow-behind"></div>
       <div class="hero-neon-ring"></div>
-      <!-- Troque o placeholder pela foto dela: <img class="hero-photo" src="foto.jpg" alt="Letícia"> -->
-      <div class="hero-photo-placeholder">
+
+      <!-- 🔧 Troque o src para mudar a foto. Ex: src="img/sorrisoleticia.png" -->
+      <img
+        class="hero-photo foto-topo"
+        id="heroPhoto"
+        src="img/leVermelho.jpg"
+        alt="Letícia"
+        onerror="this.style.display='none'; document.getElementById('heroPlaceholder').style.display='flex';"
+      >
+
+      <div class="hero-photo-placeholder" id="heroPlaceholder" style="display:none;">
         <div class="ph-heart">♥</div>
         <div class="ph-text">Adicione sua foto favorita aqui</div>
       </div>
     </div>
   </section>
 
-  <!-- ── GALERIA DE MEMÓRIAS ── -->
   <section id="memories" class="section-bg-gradient">
     <div class="section-wrapper">
       <div class="section-eyebrow reveal">Nossos momentos ♥</div>
@@ -293,40 +396,67 @@
     </div>
 
     <div class="gallery-scroll" id="galleryScroll">
-      <div class="polaroid" onclick="openModal('Seu sorriso ilumina meus dias. 🌸')">
-        <div class="polaroid-img-placeholder">🌸</div>
-        <div class="polaroid-caption">Seu sorriso ilumina meus dias.</div>
+      <!-- Polaroid 1 -->
+      <div class="polaroid" onclick="openModal('Seu olhar ilumina meus dias. 🌸')">
+        <img class="polaroid-img" id="polaroid1Img" src="img/Olhos.jpeg" alt="Momento especial" style="display: block;">
+        <div class="polaroid-img-placeholder" id="polaroid1Placeholder" style="display: none;">🌸</div>
+        <div class="polaroid-caption">Seu olhar ilumina meus dias.</div>
         <div class="polaroid-heart">♥</div>
       </div>
+      
+      <!-- Polaroid 2 -->
       <div class="polaroid" onclick="openModal('Meu lugar favorito é com você. 🏠')">
-        <div class="polaroid-img-placeholder">✨</div>
+        <img class="polaroid-img" id="polaroid2Img" src="img/lugarFavorito.jpeg" alt="Momento especial" style="display: block;">
+        <div class="polaroid-img-placeholder" id="polaroid2Placeholder" style="display: none;">✨</div>
         <div class="polaroid-caption">Meu lugar favorito é com você.</div>
         <div class="polaroid-heart">♥</div>
       </div>
+      
+      <!-- Polaroid 3 -->
       <div class="polaroid" onclick="openModal('Seu jeito me faz querer ser melhor. 💫')">
-        <div class="polaroid-img-placeholder">💫</div>
+        <img class="polaroid-img" id="polaroid3Img" src="img/seuJeito.jpeg" alt="Momento especial" style="display: block;">
+        <div class="polaroid-img-placeholder" id="polaroid3Placeholder" style="display: none;">💫</div>
         <div class="polaroid-caption">Seu jeito me faz querer ser melhor.</div>
         <div class="polaroid-heart">♥</div>
       </div>
+      
+      <!-- Polaroid 4 -->
       <div class="polaroid" onclick="openModal('Mais que momentos, memórias. 🎞️')">
-        <div class="polaroid-img-placeholder">🎞️</div>
+        <img class="polaroid-img" id="polaroid4Img" src="img/Memorias.jpeg" alt="Momento especial" style="display: block;">
+        <div class="polaroid-img-placeholder" id="polaroid4Placeholder" style="display: none;">🎞️</div>
         <div class="polaroid-caption">Mais que momentos, memórias.</div>
         <div class="polaroid-heart">♥</div>
       </div>
+      
+      <!-- Polaroid 5 -->
       <div class="polaroid" onclick="openModal('Você deixa tudo mais leve. 🕊️')">
-        <div class="polaroid-img-placeholder">🕊️</div>
+        <img class="polaroid-img" id="polaroid5Img" src="img/tudomaisleve.jpeg" alt="Momento especial" style="display: block;">
+        <div class="polaroid-img-placeholder" id="polaroid5Placeholder" style="display: none;">🕊️</div>
         <div class="polaroid-caption">Você deixa tudo mais leve.</div>
         <div class="polaroid-heart">♥</div>
       </div>
+      
+      <!-- Polaroid 6 -->
       <div class="polaroid" onclick="openModal('Cada momento com você é especial. 💎')">
-        <div class="polaroid-img-placeholder">💎</div>
+        <img class="polaroid-img" id="polaroid6Img" src="img/cadaMomentoESP.jpeg" alt="Momento especial" style="display: block;">
+        <div class="polaroid-img-placeholder" id="polaroid6Placeholder" style="display: none;">💎</div>
         <div class="polaroid-caption">Cada momento é especial.</div>
+        <div class="polaroid-heart">♥</div>
+      </div>
+      
+      <!-- Polaroid 7 (Sorriso) -->
+      <div class="polaroid polaroid-smile" onclick="openModal('Esse sorriso... é o meu lugar favorito no mundo inteiro. 😊')">
+        <img class="polaroid-img" id="polaroid7Img" src="img/sorrisoleticia.png" alt="Sorriso da Letícia" style="display: block;">
+        <div class="polaroid-img-placeholder polaroid-smile-placeholder" id="polaroid7Placeholder" style="display: none;">
+          <div class="smile-icon">😊</div>
+          <div class="smile-hint">Foto do sorriso dela</div>
+        </div>
+        <div class="polaroid-caption">O sorriso mais lindo do mundo.</div>
         <div class="polaroid-heart">♥</div>
       </div>
     </div>
   </section>
 
-  <!-- ── COISAS QUE AMO ── -->
   <section id="love">
     <div class="section-wrapper">
       <div class="section-eyebrow reveal">Coisas que eu amo em você ♥</div>
@@ -369,17 +499,15 @@
     </div>
   </section>
 
-  <!-- ── CARTA ── -->
   <section id="letter" class="letter-section">
     <div class="letter-wrapper">
-      <div class="letter-title reveal">Carta pra você</div>
+      <div class="letter-title reveal" id="letterTitle">Carta pra você</div>
       <div class="letter-heart-decoration reveal">♥</div>
       <div class="letter-body reveal" id="letterBody"></div>
       <div class="letter-signature" id="letterSignature">Eu te amo. ♥</div>
     </div>
   </section>
 
-  <!-- ── CONTADOR ── -->
   <section id="forever" class="counter-section">
     <div class="section-eyebrow reveal">Para sempre ♥</div>
     <div class="section-divider"></div>
@@ -409,15 +537,13 @@
     <p class="counter-phrase reveal">E que venham infinitos mais. ♥</p>
   </section>
 
-  <!-- ── FOOTER ── -->
   <footer>
     <div class="footer-text">Feito com todo o meu amor, pra você. ♥</div>
     <div class="footer-sub">um cantinho na internet criado só pra você, Letícia</div>
   </footer>
 
-</div><!-- /main-site -->
+</div>
 
-<!-- ── MODAL ── -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal-card">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -429,4 +555,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
