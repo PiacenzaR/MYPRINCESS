@@ -171,7 +171,7 @@ if (iCanvas) {
 }
 
 // ============================================================
-//  AUDIO
+//  AUDIO - COM SUPORTE PARA CELULAR
 // ============================================================
 function fadeVolumeTo(target, duration) {
   if (!audioInstance) return;
@@ -193,54 +193,6 @@ function fadeVolumeTo(target, duration) {
   requestAnimationFrame(step);
 }
 
-function startMusic() {
-  if (musicStarted) return;
-  musicStarted = true;
-
-  const audio = document.getElementById('bgMusic');
-  if (!audio) return;
-  audioInstance = audio;
-  audio.loop = true;
-  audio.volume = 0.0;
-
-  // Tenta tocar automaticamente
-  const playPromise = audio.play();
-  
-  if (playPromise !== undefined) {
-    playPromise
-      .then(() => {
-        // Autoplay funcionou!
-        fadeVolumeTo(0.07, 2500);
-        updateMusicUI(true);
-      })
-      .catch(() => {
-        // Autoplay bloqueado - aguarda interação do usuário
-        console.log("Autoplay bloqueado, aguardando interação...");
-        audio.volume = 0;
-        
-        // Cria um evento único para iniciar a música no primeiro toque/clique
-        const startAudioOnInteraction = function() {
-          if (musicStarted && audioInstance) {
-            audio.play()
-              .then(() => {
-                fadeVolumeTo(0.07, 2500);
-                updateMusicUI(true);
-              })
-              .catch(e => console.log("Ainda não foi possível tocar:", e));
-          }
-          // Remove os listeners após o primeiro toque
-          document.removeEventListener('click', startAudioOnInteraction);
-          document.removeEventListener('touchstart', startAudioOnInteraction);
-        };
-        
-        document.addEventListener('click', startAudioOnInteraction);
-        document.addEventListener('touchstart', startAudioOnInteraction);
-      });
-  }
-  
-  updateMusicUI(true);
-}
-
 function updateMusicUI(isPlayingState) {
   isPlaying = isPlayingState;
   const btn = document.getElementById('playBtn');
@@ -255,6 +207,46 @@ function updateMusicUI(isPlayingState) {
     if (isPlayingState) player.classList.add('playing');
     else player.classList.remove('playing');
   }
+}
+
+function startMusic() {
+  if (musicStarted) return;
+  musicStarted = true;
+
+  const audio = document.getElementById('bgMusic');
+  if (!audio) return;
+  audioInstance = audio;
+  audio.loop = true;
+  audio.volume = 0.0;
+
+  const playPromise = audio.play();
+  
+  if (playPromise !== undefined) {
+    playPromise
+      .then(() => {
+        fadeVolumeTo(0.07, 2500);
+        updateMusicUI(true);
+      })
+      .catch(() => {
+        audio.volume = 0;
+        const startAudioOnInteraction = function() {
+          if (musicStarted && audioInstance) {
+            audio.play()
+              .then(() => {
+                fadeVolumeTo(0.07, 2500);
+                updateMusicUI(true);
+              })
+              .catch(e => console.log("Ainda não foi possível tocar:", e));
+          }
+          document.removeEventListener('click', startAudioOnInteraction);
+          document.removeEventListener('touchstart', startAudioOnInteraction);
+        };
+        document.addEventListener('click', startAudioOnInteraction);
+        document.addEventListener('touchstart', startAudioOnInteraction);
+      });
+  }
+  
+  updateMusicUI(true);
 }
 
 function riseToEmotion() { fadeVolumeTo(0.32, 4500); }
@@ -371,7 +363,6 @@ function showNextStep() {
     el.classList.add('visible');
     currentItemEl = el;
 
-    // Controle de volume
     if (currentStep === 0) riseToEmotion();
     if (currentStep === sequence.length - 2) approachPeak();
     if (currentStep === sequence.length - 1) peakEmotion();
@@ -382,7 +373,6 @@ function showNextStep() {
     if (currentStep < sequence.length) {
       stepTimer = setTimeout(showNextStep, duration);
     } else {
-      // Último item - aguarda clique
       setTimeout(() => {
         goAmbient();
         const continueBtn = document.getElementById('introContinue');
@@ -395,7 +385,7 @@ function showNextStep() {
 }
 
 // ============================================================
-//  CLIQUE PARA ENTRAR (apenas na última frase)
+//  CLIQUE PARA ENTRAR
 // ============================================================
 let clickToEnterActive = false;
 
@@ -432,6 +422,16 @@ function enterSite() {
     if (intro) intro.style.display = 'none';
     if (main) main.classList.add('visible');
     introPhase = 'site';
+    
+    // GERA UMA CARTA ALEATÓRIA NOVA AO ENTRAR
+    currentLetterText = getRandomCarta();
+    letterIndex = 0;
+    letterAnimating = false;
+    const letterBody = document.getElementById('letterBody');
+    if (letterBody) letterBody.innerHTML = '';
+    const sig = document.getElementById('letterSignature');
+    if (sig) sig.style.opacity = '0';
+    
     startLetterAnimation();
     setupImagesVisibility();
   }, 1500);
@@ -441,7 +441,6 @@ function enterSite() {
 //  CONFIGURAR VISIBILIDADE DAS IMAGENS
 // ============================================================
 function setupImagesVisibility() {
-  // Hero image
   const heroImg = document.getElementById('heroPhoto');
   const heroPlaceholder = document.getElementById('heroPlaceholder');
   if (heroImg && heroPlaceholder) {
@@ -460,7 +459,6 @@ function setupImagesVisibility() {
     }
   }
   
-  // Polaroids
   for (let i = 1; i <= 7; i++) {
     const img = document.getElementById(`polaroid${i}Img`);
     const placeholder = document.getElementById(`polaroid${i}Placeholder`);
@@ -578,29 +576,150 @@ setInterval(() => {
 }, 2000);
 
 // ============================================================
-//  LETTER TYPEWRITER
+//  LETTER TYPEWRITER - COM CARTAS ROMÂNTICAS ALEATÓRIAS
 // ============================================================
-const letterText = `Você chegou devagar, sem fazer barulho...
-e conquistou tudo em mim.
 
-Você me faz bem, me faz feliz,
-me faz querer ficar.
+const cartas = [
+  `Meu amor,
 
-Nunca imaginei que alguém pudesse me fazer
-sentir tanto assim, com tão pouco.
+Desde o dia em que você entrou na minha vida, tudo ganhou mais cor, mais sentido, mais brilho.
 
-Um olhar seu e tudo fica mais fácil.
-Uma palavra sua e o mundo fica mais gentil.
+Seu sorriso é a luz que ilumina meus dias mais escuros. Sua voz é a melodia que acalma minha alma.
 
-Obrigado por existir.
-Obrigado por ser você.
-Obrigado por me escolher.`;
+Eu não sei o que seria de mim sem você ao meu lado. Você me ensinou o que é amar de verdade.
 
-let letterIndex = 0, letterAnimating = false;
+Obrigado por cada abraço, cada risada, cada momento compartilhado.
+
+Eu te amo mais do que palavras podem dizer. E esse amor só cresce a cada segundo. ♥`,
+
+  `Letícia,
+
+Se existe uma coisa que eu tenho certeza nessa vida, é o amor que sinto por você.
+
+Você chegou sem fazer barulho e conquistou tudo em mim. Seu jeito, seu olhar, sua essência... tudo em você me encanta.
+
+Cada dia ao seu lado é um presente. Cada conversa, cada silêncio, cada risada fica guardada no meu coração.
+
+Prometo cuidar de você, te fazer sorrir sempre, e te amar em todos os dias da minha vida.
+
+Você é minha casa, meu porto seguro, meu amor para sempre. ♥`,
+
+  `Minha vida mudou no dia que te conheci.
+
+Antes de você, eu não sabia o que era sentir o coração bater mais forte. Não sabia que era possível pensar em alguém o tempo todo.
+
+Você despertou algo em mim que eu nem sabia que existia. Meu mundo ficou mais bonito, mais leve, mais feliz.
+
+Quero estar ao seu lado em cada conquista, em cada desafio, em cada sonho realizado.
+
+Você é a melhor escolha que eu já fiz. E eu faria tudo de novo, só para te encontrar outra vez. ♥`,
+
+  `Amor,
+
+Sabe aquela música que toca e te lembra alguém especial? Você é a música que toca dentro de mim o dia inteiro.
+
+Sua presença transforma qualquer lugar especial. Seu abraço é o único lugar onde eu me sinto completo.
+
+Não existe distância que nos separe, porque você vive dentro de mim. Em cada pensamento, em cada batida do coração.
+
+Obrigado por existir. Obrigado por me escolher. Obrigado por ser a razão do meu sorriso todos os dias.
+
+Eu te amo. Simples assim. Para sempre assim. ♥`,
+
+  `Letícia, meu amor,
+
+Se eu pudesse escrever todas as estrelas do céu, ainda não seria o suficiente para descrever o que sinto por você.
+
+Você é a pessoa mais incrível que eu já conheci. Sua força, sua sensibilidade, seu coração gigante... tudo em você me fascina.
+
+Cada dia eu descubro um motivo novo para te amar mais. E eu quero passar o resto da minha vida descobrindo esses motivos.
+
+Você não é só parte da minha vida. Você é a minha vida.
+
+Te amo hoje, amanhã e sempre. ♥`,
+
+  `O que seria de mim sem você?
+
+Talvez eu ainda estivesse perdido, sem saber o que é ser verdadeiramente feliz.
+
+Você chegou e trouxe cor para um mundo que era cinza. Você trouxe luz para os meus dias e paz para as minhas noites.
+
+Não existe palavra que defina o tamanho da minha gratidão por ter você na minha vida.
+
+Você é meu maior presente, meu maior amor, minha maior certeza.
+
+E eu prometo: vou te amar em todas as vidas que eu tiver. ♥`,
+
+  `Meu amor,
+
+Sabe qual é o meu lugar favorito no mundo? É do seu lado. Ali, onde seu braço me envolve e o mundo lá fora some.
+
+Você é o melhor que a vida me deu. Não há dinheiro, presente ou conquista que se compare ao que sinto por você.
+
+Seu sorriso é meu combustível. Sua felicidade é minha prioridade.
+
+Eu acordo pensando em você e durmo agradecendo por mais um dia ao seu lado.
+
+Obrigado por ser exatamente quem você é. Perfeita. Pra mim. ♥`,
+
+  `Letícia,
+
+Se um dia eu escrever um livro, cada página será sobre você. Sobre como seu sorriso ilumina meu mundo. Sobre como seu toque acalma minha alma.
+
+Você me inspira a ser melhor todos os dias. Por você, eu quero ser a melhor versão de mim mesmo.
+
+Não há desafio que eu não enfrente se for para estar com você. Não há distância que me impeça de te amar.
+
+Você é meu começo, meu meio e meu fim.
+
+Te amo infinitamente. ♥`,
+
+  `Quando eu te olho, eu vejo o meu futuro.
+
+Vejo nossos planos, nossos sonhos, nossos dias de sol e até os dias de chuva. E em todos eles, eu estou feliz porque você está comigo.
+
+Você é a pessoa que eu quero ao meu lado para envelhecer. Para compartilhar as alegrias e dividir as tristezas.
+
+Nada nessa vida faz sentido sem você.
+
+Então, obrigado por fazer sentido na minha vida. Obrigado por ser o amor da minha vida. ♥`,
+
+  `Meu amor,
+
+Existem amores que marcam, e existe você, que transformou tudo.
+
+Antes de você, eu respirava. Depois de você, eu aprendi a viver.
+
+Cada dia eu descubro um jeito novo de te amar. Cada dia você me surpreende com sua doçura, sua força, sua luz.
+
+Você é a página mais bonita da minha história. E eu quero continuar escrevendo essa história com você para sempre.
+
+Te amo além do que os olhos podem ver. ♥`
+];
+
+function getRandomCarta() {
+  const index = Math.floor(Math.random() * cartas.length);
+  return cartas[index];
+}
+
+let letterIndex = 0;
+let letterAnimating = false;
+let currentLetterText = getRandomCarta();
 
 function startLetterAnimation() {
   const section = document.querySelector('.letter-section');
   if (!section) return;
+  
+  currentLetterText = getRandomCarta();
+  letterIndex = 0;
+  letterAnimating = false;
+  
+  const letterBody = document.getElementById('letterBody');
+  if (letterBody) letterBody.innerHTML = '';
+  
+  const sig = document.getElementById('letterSignature');
+  if (sig) sig.style.opacity = '0';
+  
   new IntersectionObserver((entries, obs) => {
     if (entries[0].isIntersecting && !letterAnimating) {
       letterAnimating = true;
@@ -613,11 +732,18 @@ function startLetterAnimation() {
 function typeNextChar() {
   const el = document.getElementById('letterBody');
   if (!el) return;
-  if (letterIndex < letterText.length) {
-    const ch = letterText[letterIndex];
+  
+  if (letterIndex < currentLetterText.length) {
+    const ch = currentLetterText[letterIndex];
     el.innerHTML += ch === '\n' ? '<br>' : ch;
     letterIndex++;
-    setTimeout(typeNextChar, (ch === '.' || ch === '!' || ch === '?') ? 180 : 50);
+    
+    let delay = 45;
+    if (ch === '.' || ch === '!' || ch === '?') delay = 280;
+    else if (ch === ',') delay = 120;
+    else if (ch === '\n') delay = 80;
+    
+    setTimeout(typeNextChar, delay);
   } else {
     const sig = document.getElementById('letterSignature');
     if (sig) sig.style.opacity = '1';
@@ -627,7 +753,7 @@ function typeNextChar() {
 // ============================================================
 //  COUNTER - DATA CORRIGIDA: 18 de abril de 2025
 // ============================================================
-const startDate = new Date(2025, 3, 18);  // 18 de abril de 2025 - dia que nos conhecemos ♥
+const startDate = new Date(2025, 3, 18);
 
 function updateCounter() {
   const diff = Date.now() - startDate.getTime();
@@ -709,5 +835,4 @@ function startExperience() {
   runBouquetIntro();
 }
 
-// Inicia automaticamente após um pequeno delay
 setTimeout(startExperience, 500);
