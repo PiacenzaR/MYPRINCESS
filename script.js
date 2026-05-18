@@ -753,7 +753,7 @@ function typeNextChar() {
 // ============================================================
 //  COUNTER - DATA CORRIGIDA: 18 de abril de 2025
 // ============================================================
-const startDate = new Date(2025, 3, 18);
+const startDate = new Date(2026, 3, 18);
 
 function updateCounter() {
   const diff = Date.now() - startDate.getTime();
