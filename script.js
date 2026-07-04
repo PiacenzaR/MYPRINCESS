@@ -580,601 +580,793 @@ setInterval(() => {
 // ============================================================
 
 const cartas = [
-  `Meu amor,
-
-Desde o dia em que você entrou na minha vida, tudo ganhou mais cor, mais sentido, mais brilho.
-
-Seu sorriso é a luz que ilumina meus dias mais escuros. Sua voz é a melodia que acalma minha alma.
-
-Eu não sei o que seria de mim sem você ao meu lado. Você me ensinou o que é amar de verdade.
-
-Obrigado por cada abraço, cada risada, cada momento compartilhado.
-
-Eu te amo mais do que palavras podem dizer. E esse amor só cresce a cada segundo. ♥`,
-
-  `Letícia,
-
-Se existe uma coisa que eu tenho certeza nessa vida, é o amor que sinto por você.
-
-Você chegou sem fazer barulho e conquistou tudo em mim. Seu jeito, seu olhar, sua essência... tudo em você me encanta.
-
-Cada dia ao seu lado é um presente. Cada conversa, cada silêncio, cada risada fica guardada no meu coração.
-
-Prometo cuidar de você, te fazer sorrir sempre, e te amar em todos os dias da minha vida.
-
-Você é minha casa, meu porto seguro, meu amor para sempre. ♥`,
-
-  `Minha vida mudou no dia que te conheci.
-
-Antes de você, eu não sabia o que era sentir o coração bater mais forte. Não sabia que era possível pensar em alguém o tempo todo.
-
-Você despertou algo em mim que eu nem sabia que existia. Meu mundo ficou mais bonito, mais leve, mais feliz.
-
-Quero estar ao seu lado em cada conquista, em cada desafio, em cada sonho realizado.
-
-Você é a melhor escolha que eu já fiz. E eu faria tudo de novo, só para te encontrar outra vez. ♥`,
-
-  `Amor,
-
-Sabe aquela música que toca e te lembra alguém especial? Você é a música que toca dentro de mim o dia inteiro.
-
-Sua presença transforma qualquer lugar especial. Seu abraço é o único lugar onde eu me sinto completo.
-
-Não existe distância que nos separe, porque você vive dentro de mim. Em cada pensamento, em cada batida do coração.
-
-Obrigado por existir. Obrigado por me escolher. Obrigado por ser a razão do meu sorriso todos os dias.
-
-Eu te amo. Simples assim. Para sempre assim. ♥`,
-
-  `Letícia, meu amor,
-
-Se eu pudesse escrever todas as estrelas do céu, ainda não seria o suficiente para descrever o que sinto por você.
-
-Você é a pessoa mais incrível que eu já conheci. Sua força, sua sensibilidade, seu coração gigante... tudo em você me fascina.
-
-Cada dia eu descubro um motivo novo para te amar mais. E eu quero passar o resto da minha vida descobrindo esses motivos.
-
-Você não é só parte da minha vida. Você é a minha vida.
-
-Te amo hoje, amanhã e sempre. ♥`,
-
-  `O que seria de mim sem você?
-
-Talvez eu ainda estivesse perdido, sem saber o que é ser verdadeiramente feliz.
-
-Você chegou e trouxe cor para um mundo que era cinza. Você trouxe luz para os meus dias e paz para as minhas noites.
-
-Não existe palavra que defina o tamanho da minha gratidão por ter você na minha vida.
-
-Você é meu maior presente, meu maior amor, minha maior certeza.
-
-E eu prometo: vou te amar em todas as vidas que eu tiver. ♥`,
-
-  `Meu amor,
-
-Sabe qual é o meu lugar favorito no mundo? É do seu lado. Ali, onde seu braço me envolve e o mundo lá fora some.
-
-Você é o melhor que a vida me deu. Não há dinheiro, presente ou conquista que se compare ao que sinto por você.
-
-Seu sorriso é meu combustível. Sua felicidade é minha prioridade.
-
-Eu acordo pensando em você e durmo agradecendo por mais um dia ao seu lado.
-
-Obrigado por ser exatamente quem você é. Perfeita. Pra mim. ♥`,
-
-  `Letícia,
-
-Se um dia eu escrever um livro, cada página será sobre você. Sobre como seu sorriso ilumina meu mundo. Sobre como seu toque acalma minha alma.
-
-Você me inspira a ser melhor todos os dias. Por você, eu quero ser a melhor versão de mim mesmo.
-
-Não há desafio que eu não enfrente se for para estar com você. Não há distância que me impeça de te amar.
-
-Você é meu começo, meu meio e meu fim.
-
-Te amo infinitamente. ♥`,
-
-  `Quando eu te olho, eu vejo o meu futuro.
-
-Vejo nossos planos, nossos sonhos, nossos dias de sol e até os dias de chuva. E em todos eles, eu estou feliz porque você está comigo.
-
-Você é a pessoa que eu quero ao meu lado para envelhecer. Para compartilhar as alegrias e dividir as tristezas.
-
-Nada nessa vida faz sentido sem você.
-
-Então, obrigado por fazer sentido na minha vida. Obrigado por ser o amor da minha vida. ♥`,
-
-  `Meu amor,
-
-Existem amores que marcam, e existe você, que transformou tudo.
-
-Antes de você, eu respirava. Depois de você, eu aprendi a viver.
-
-Cada dia eu descubro um jeito novo de te amar. Cada dia você me surpreende com sua doçura, sua força, sua luz.
-
-Você é a página mais bonita da minha história. E eu quero continuar escrevendo essa história com você para sempre.
-
-Te amo além do que os olhos podem ver. ♥`,
-
- `Meu amor,
-
-Desde o dia em que você entrou na minha vida, tudo ganhou mais cor, mais sentido, mais brilho.
-
-Seu sorriso é a luz que ilumina meus dias mais escuros. Sua voz é a melodia que acalma minha alma.
-
-Eu não sei o que seria de mim sem você ao meu lado. Você me ensinou o que é amar de verdade.
-
-Obrigado por cada abraço, cada risada, cada momento compartilhado.
-
-Eu te amo mais do que palavras podem dizer. E esse amor só cresce a cada segundo. ♥`,
-
-  `Letícia,
-
-Se existe uma coisa que eu tenho certeza nessa vida, é o amor que sinto por você.
-
-Você chegou sem fazer barulho e conquistou tudo em mim. Seu jeito, seu olhar, sua essência... tudo em você me encanta.
-
-Cada dia ao seu lado é um presente. Cada conversa, cada silêncio, cada risada fica guardada no meu coração.
-
-Prometo cuidar de você, te fazer sorrir sempre, e te amar em todos os dias da minha vida.
-
-Você é minha casa, meu porto seguro, meu amor para sempre. ♥`,
-
-  `Minha vida mudou no dia que te conheci.
-
-Antes de você, eu não sabia o que era sentir o coração bater mais forte. Não sabia que era possível pensar em alguém o tempo todo.
-
-Você despertou algo em mim que eu nem sabia que existia. Meu mundo ficou mais bonito, mais leve, mais feliz.
-
-Quero estar ao seu lado em cada conquista, em cada desafio, em cada sonho realizado.
-
-Você é a melhor escolha que eu já fiz. E eu faria tudo de novo, só para te encontrar outra vez. ♥`,
-
-  `Amor,
-
-Sabe aquela música que toca e te lembra alguém especial? Você é a música que toca dentro de mim o dia inteiro.
-
-Sua presença transforma qualquer lugar especial. Seu abraço é o único lugar onde eu me sinto completo.
-
-Não existe distância que nos separe, porque você vive dentro de mim. Em cada pensamento, em cada batida do coração.
-
-Obrigado por existir. Obrigado por me escolher. Obrigado por ser a razão do meu sorriso todos os dias.
-
-Eu te amo. Simples assim. Para sempre assim. ♥`,
-
-  `Letícia, meu amor,
-
-Se eu pudesse escrever todas as estrelas do céu, ainda não seria o suficiente para descrever o que sinto por você.
-
-Você é a pessoa mais incrível que eu já conheci. Sua força, sua sensibilidade, seu coração gigante... tudo em você me fascina.
-
-Cada dia eu descubro um motivo novo para te amar mais. E eu quero passar o resto da minha vida descobrindo esses motivos.
-
-Você não é só parte da minha vida. Você é a minha vida.
-
-Te amo hoje, amanhã e sempre. ♥`,
-
-  `O que seria de mim sem você?
-
-Talvez eu ainda estivesse perdido, sem saber o que é ser verdadeiramente feliz.
-
-Você chegou e trouxe cor para um mundo que era cinza. Você trouxe luz para os meus dias e paz para as minhas noites.
-
-Não existe palavra que defina o tamanho da minha gratidão por ter você na minha vida.
-
-Você é meu maior presente, meu maior amor, minha maior certeza.
-
-E eu prometo: vou te amar em todas as vidas que eu tiver. ♥`,
-
-  `Meu amor,
-
-Sabe qual é o meu lugar favorito no mundo? É do seu lado. Ali, onde seu braço me envolve e o mundo lá fora some.
-
-Você é o melhor que a vida me deu. Não há dinheiro, presente ou conquista que se compare ao que sinto por você.
-
-Seu sorriso é meu combustível. Sua felicidade é minha prioridade.
-
-Eu acordo pensando em você e durmo agradecendo por mais um dia ao seu lado.
-
-Obrigado por ser exatamente quem você é. Perfeita. Pra mim. ♥`,
-
-  `Letícia,
-
-Se um dia eu escrever um livro, cada página será sobre você. Sobre como seu sorriso ilumina meu mundo. Sobre como seu toque acalma minha alma.
-
-Você me inspira a ser melhor todos os dias. Por você, eu quero ser a melhor versão de mim mesmo.
-
-Não há desafio que eu não enfrente se for para estar com você. Não há distância que me impeça de te amar.
-
-Você é meu começo, meu meio e meu fim.
-
-Te amo infinitamente. ♥`,
-
-  `Quando eu te olho, eu vejo o meu futuro.
-
-Vejo nossos planos, nossos sonhos, nossos dias de sol e até os dias de chuva. E em todos eles, eu estou feliz porque você está comigo.
-
-Você é a pessoa que eu quero ao meu lado para envelhecer. Para compartilhar as alegrias e dividir as tristezas.
-
-Nada nessa vida faz sentido sem você.
-
-Então, obrigado por fazer sentido na minha vida. Obrigado por ser o amor da minha vida. ♥`,
-
-  `Meu amor,
-
-Existem amores que marcam, e existe você, que transformou tudo.
-
-Antes de você, eu respirava. Depois de você, eu aprendi a viver.
-
-Cada dia eu descubro um jeito novo de te amar. Cada dia você me surpreende com sua doçura, sua força, sua luz.
-
-Você é a página mais bonita da minha história. E eu quero continuar escrevendo essa história com você para sempre.
-
-Te amo além do que os olhos podem ver. ♥`,
-
-`Amor,
-
-Eu fico tentando encontrar palavras que consigam explicar o que eu sinto por você… mas a verdade é que nada parece suficiente.
-
-Porque o que eu sinto não é simples, não é pequeno… é algo que cresce a cada dia, de um jeito que eu nunca imaginei ser possível.
-
-Você entrou na minha vida de uma forma tão natural, mas mudou tudo completamente.
-
-Hoje, eu penso em você o tempo todo. Em cada detalhe do meu dia, em cada momento, em cada plano… é você.
-
-E não é só amor… é vontade de estar junto, de cuidar, de proteger, de construir algo que dure pra sempre.
-
-Eu amo você de um jeito que nem sei explicar direito… só sei sentir. ♥`,
-
-`Letícia,
-
-Se eu pudesse te mostrar tudo o que passa dentro de mim quando penso em você… você entenderia o quanto é importante pra mim.
-
-Não é só sobre gostar, não é só sobre carinho.
-
-É algo muito mais profundo.
-
-É sentir paz quando você tá por perto.
-
-É sentir falta quando você não tá.
-
-É querer dividir cada momento, cada conquista, cada sonho… com você.
-
-Você virou parte de mim de um jeito que eu não consigo mais separar.
-
-E sinceramente? Eu nem quero.
-
-Porque amar você é a melhor coisa que já me aconteceu. ♥`,
-
+`Letícia, meu amor,
+ 
+Hoje faz 76 dias desde que você entrou na minha vida…
+ 
+E eu fico aqui, tentando entender como algo tão simples quanto te conhecer mudou tudo tão profundamente.
+ 
+Cada um desses dias, mesmo os difíceis, valeu a pena porque foi ao seu lado.
+ 
+Obrigado por existir.
+ 
+Obrigado por me escolher.
+ 
+Obrigado por me ensinar, dia após dia, o que é amar de verdade. ♥`,
+ 
 `Meu amor,
-
-Tem dias que eu paro e fico pensando em tudo que a gente já viveu… e em tudo que ainda quero viver com você.
-
-E isso me dá uma certeza muito forte: eu quero você no meu futuro.
-
-Não importa o que aconteça, não importa as dificuldades… eu quero continuar do seu lado.
-
-Porque você não é só alguém especial.
-
-Você é a pessoa que eu escolhi amar, cuidar e estar junto.
-
-E eu escolheria você de novo… e de novo… e de novo.
-
-Todos os dias. ♥`,
-
+ 
+Eu queria começar essas cartas te dizendo uma coisa simples, mas que carrega tudo o que eu sinto: eu te amo.
+ 
+E eu sei que nem sempre mostrei isso do jeito que você merecia…
+ 
+Mas hoje eu quero recomeçar.
+ 
+Mostrando, com cada palavra, com cada gesto, o quanto você significa pra mim.
+ 
+Obrigado por ainda estar aqui. ♥`,
+ 
 `Amor,
-
-Você tem noção do quanto mudou a minha vida?
-
-Porque antes de você, muita coisa era vazia… sem sentido.
-
-E depois que você chegou, tudo começou a fazer sentido de verdade.
-
-Você trouxe cor, trouxe alegria, trouxe uma paz que eu nunca tinha sentido.
-
-E o mais incrível é que você fez isso sendo exatamente quem você é.
-
-Sem esforço.
-
-Só sendo você.
-
-E é por isso que eu te amo tanto. ♥`,
-
+ 
+Eu errei.
+ 
+E eu sei que palavras não apagam o que eu fiz…
+ 
+Mas eu preciso que você saiba, com toda a sinceridade que existe em mim: eu me arrependo de verdade.
+ 
+Eu fui burro. Agi sem pensar no tamanho da dor que isso poderia te causar.
+ 
+E isso não é quem eu quero ser pra você.
+ 
+Me desculpa.
+ 
+Eu vou fazer diferente. ♥`,
+ 
 `Letícia,
-
+ 
+Antes de qualquer coisa… eu preciso te pedir desculpas.
+ 
+De coração. Sem desculpa esfarrapada. Sem "mas".
+ 
+Eu te machuquei, e isso pesa em mim todos os dias, em cada momento de silêncio.
+ 
+Você não merecia passar por isso.
+ 
+Eu só espero, com toda a humildade que eu tenho, ter a chance de te mostrar que eu aprendi. ♥`,
+ 
+`Meu amor,
+ 
+Tem coisas que a gente só entende o valor quando quase perde…
+ 
+E eu entendi.
+ 
+Entendi o quanto você é importante.
+ 
+O quanto eu te amo.
+ 
+E o quanto dói saber que fui eu quem te machucou.
+ 
+Me desculpa por ter sido burro.
+ 
+Você merece muito mais cuidado do que eu te dei naquele momento. ♥`,
+ 
+`Amor,
+ 
+Eu queria voltar no tempo e mudar o que eu fiz…
+ 
+Não posso.
+ 
+Mas posso te prometer, com todas as minhas forças, que vou aprender com isso.
+ 
+Você é a pessoa mais importante da minha vida.
+ 
+E eu não quero, nunca mais, te ver triste por minha causa.
+ 
+Perdão. De verdade. ♥`,
+ 
+`Letícia,
+ 
+Desde que a gente começou, cada dia com você foi um presente…
+ 
+E é exatamente por te amar tanto que dói tanto saber que eu te decepcionei.
+ 
+Eu sei que confiança se reconstrói com atitude, não só com palavras.
+ 
+E é isso que eu quero fazer.
+ 
+Todos os dias.
+ 
+Um de cada vez.
+ 
+Te amo. Me desculpa. ♥`,
+ 
+`Meu amor,
+ 
+Você merece alguém que pensa antes de agir…
+ 
+Que cuida das suas palavras e do seu coração como quem cuida de algo raro.
+ 
+Eu falhei nisso, e sinto muito.
+ 
+Mas eu também quero que você saiba: o meu amor por você é real.
+ 
+E eu vou trabalhar, com paciência e com verdade, pra ser a pessoa que você merece.
+ 
+Obrigado por ainda me dar essa chance. ♥`,
+ 
+`Amor,
+ 
+Se eu pudesse resumir o que eu sinto agora, seria isto: arrependimento por ter te magoado… e gratidão por você ainda estar aqui.
+ 
+Eu não quero só pedir desculpas.
+ 
+Eu quero mostrar, dia após dia, gesto após gesto, que você pode confiar em mim de novo.
+ 
+Eu te amo, Letícia. Mais do que ontem, menos do que amanhã. ♥`,
+ 
+`Letícia, meu amor,
+ 
+Eu passei um tempo pensando no que aconteceu…
+ 
+E cheguei a uma conclusão simples: eu fui egoísta, e isso te machucou.
+ 
+Você não merecia isso.
+ 
+Ninguém que ama de verdade quer ver a pessoa amada sofrendo por causa das próprias falhas.
+ 
+Me desculpa.
+ 
+Eu vou ser melhor. Não porque eu preciso… mas porque você merece. ♥`,
+ 
+`Meu amor,
+ 
+Desde o dia em que você entrou na minha vida, tudo ganhou mais cor, mais sentido, mais brilho…
+ 
+Seu sorriso é a luz que ilumina meus dias mais escuros.
+ 
+Sua voz é a melodia que acalma minha alma.
+ 
+Eu não sei o que seria de mim sem você ao meu lado.
+ 
+Você me ensinou o que é amar de verdade.
+ 
+Obrigado por cada abraço, cada risada, cada momento compartilhado.
+ 
+Eu te amo mais do que palavras podem dizer. ♥`,
+ 
+`Letícia,
+ 
+Se existe uma coisa que eu tenho certeza nessa vida, é o amor que sinto por você.
+ 
+Você chegou sem fazer barulho… e conquistou tudo em mim.
+ 
+Seu jeito, seu olhar, sua essência… tudo em você me encanta.
+ 
+Prometo cuidar de você, te fazer sorrir sempre, e te amar em todos os dias da minha vida.
+ 
+Você é minha casa, meu porto seguro, meu amor para sempre. ♥`,
+ 
+`Amor,
+ 
+Eu sei que um erro pode abalar a confiança que a gente construiu…
+ 
+E eu não quero minimizar isso.
+ 
+Eu só quero que você saiba: eu estou disposto a reconstruir, tijolo por tijolo, o que eu balancei.
+ 
+Sem pressa. No seu tempo.
+ 
+Você vale esse esforço, e muito mais.
+ 
+Me desculpa. ♥`,
+ 
+`Minha vida mudou no dia que te conheci.
+ 
+Antes de você, eu não sabia o que era sentir o coração bater mais forte…
+ 
+Não sabia que era possível pensar em alguém o tempo todo.
+ 
+Você despertou algo em mim que eu nem sabia que existia.
+ 
+Quero estar ao seu lado em cada conquista, em cada desafio, em cada sonho realizado. ♥`,
+ 
+`Letícia, meu amor,
+ 
+Eu queria ter sido mais cuidadoso…
+ 
+Mais presente. Mais atento ao que você sentia.
+ 
+Não fui, e isso me machuca tanto quanto machucou você, só que de um jeito diferente: o meu vem da culpa de saber que eu poderia ter evitado.
+ 
+Perdão.
+ 
+E obrigado por me dar espaço pra consertar isso. ♥`,
+ 
+`Amor,
+ 
+Sabe aquela música que toca e te lembra alguém especial? Você é a música que toca dentro de mim o dia inteiro.
+ 
+Sua presença transforma qualquer lugar especial.
+ 
+Seu abraço é o único lugar onde eu me sinto completo.
+ 
+Obrigado por existir.
+ 
+Obrigado por me escolher, mesmo depois de tudo. ♥`,
+ 
+`Letícia, meu amor,
+ 
+Se eu pudesse escrever todas as estrelas do céu, ainda não seria o suficiente para descrever o que sinto por você…
+ 
+Cada dia eu descubro um motivo novo para te amar mais.
+ 
+E eu quero passar o resto da minha vida descobrindo esses motivos… e corrigindo os meus erros. ♥`,
+ 
+`Meu amor,
+ 
+Eu penso muito no que aconteceu…
+ 
+E cada vez que penso, fica mais claro pra mim o tamanho do meu erro.
+ 
+Eu não quero fugir disso, nem fingir que não foi nada.
+ 
+Eu fiz besteira, e você mereceu mais respeito do que eu te dei.
+ 
+Me desculpa. Do fundo do coração. ♥`,
+ 
+`O que seria de mim sem você?
+ 
+Talvez eu ainda estivesse perdido, sem saber o que é ser verdadeiramente feliz.
+ 
+Você chegou e trouxe cor para um mundo que era cinza.
+ 
+Você é meu maior presente, meu maior amor, minha maior certeza.
+ 
+E eu prometo: vou te amar em todas as vidas que eu tiver. ♥`,
+ 
+`Meu amor,
+ 
+Sabe qual é o meu lugar favorito no mundo? É do seu lado.
+ 
+Ali, onde seu braço me envolve e o mundo lá fora some…
+ 
+Eu sei que magoei esse lugar, e isso me dói mais do que eu consigo explicar.
+ 
+Eu quero voltar a ser esse porto seguro pra você.
+ 
+Me desculpa. ♥`,
+ 
+`Letícia,
+ 
+Eu não vou inventar desculpa, nem tentar diminuir o que eu fiz.
+ 
+Eu errei. Ponto.
+ 
+O que eu posso fazer agora é mostrar, com atitude e paciência, que eu aprendi.
+ 
+Que eu te respeito, e que eu quero merecer sua confiança de novo.
+ 
+Te amo, e sinto muito. ♥`,
+ 
+`Se um dia eu escrever um livro, cada página será sobre você.
+ 
+Sobre como seu sorriso ilumina meu mundo.
+ 
+Sobre como seu toque acalma minha alma.
+ 
+Você me inspira a ser melhor todos os dias.
+ 
+Por você, eu quero ser a melhor versão de mim mesmo.
+ 
+Te amo infinitamente. ♥`,
+ 
+`Quando eu te olho, eu vejo o meu futuro.
+ 
+Vejo nossos planos, nossos sonhos, nossos dias de sol e até os dias de chuva…
+ 
+E em todos eles, eu estou feliz porque você está comigo.
+ 
+Nada nessa vida faz sentido sem você.
+ 
+Obrigado por fazer sentido na minha vida. ♥`,
+ 
+`Meu amor,
+ 
+Eu queria que você soubesse que essa dor de ter te machucado não vai embora fácil…
+ 
+E é justo que seja assim.
+ 
+Mas eu prometo: vou usar essa dor pra crescer, pra prestar mais atenção, pra nunca mais te fazer sentir o que você sentiu.
+ 
+Perdão, Letícia. ♥`,
+ 
+`Existem amores que marcam, e existe você, que transformou tudo.
+ 
+Antes de você, eu respirava.
+ 
+Depois de você, eu aprendi a viver.
+ 
+Você é a página mais bonita da minha história.
+ 
+E eu quero continuar escrevendo essa história com você, consertando o que precisar ser consertado. ♥`,
+ 
+`Amor,
+ 
+Desculpa não é só uma palavra que eu digo e sigo em frente.
+ 
+Pra mim, desculpa é ação, é mudança, é cuidado todos os dias daqui pra frente.
+ 
+Eu vou te mostrar isso, no meu tempo, no seu tempo, do jeito que você precisar.
+ 
+Eu te amo. ♥`,
+ 
+`Letícia,
+ 
 Eu amo o jeito que você sorri.
-
+ 
 Amo o jeito que você fala.
-
+ 
 Amo o jeito que você existe.
-
-Mas mais do que tudo… eu amo o jeito que você me faz sentir.
-
-Porque com você, eu me sinto completo.
-
-Me sinto feliz de verdade.
-
-Me sinto em casa.
-
-E eu nunca quero perder isso.
-
-Nunca quero perder você. ♥`,
-
+ 
+E é exatamente por te amar tanto que eu não me perdoo fácil por ter te magoado.
+ 
+Mas eu vou continuar tentando, todos os dias, ser digno desse amor. ♥`,
+ 
 `Meu amor,
-
-Se tem uma coisa que eu tenho certeza hoje… é que eu quero viver muita coisa ainda ao seu lado.
-
-Quero criar memórias com você.
-
-Quero estar com você nos dias bons… e principalmente nos dias difíceis.
-
-Quero segurar sua mão, te apoiar, te fazer sorrir, te lembrar todos os dias o quanto você é importante pra mim.
-
-Porque você é mais do que especial.
-
+ 
+Se tem uma coisa que eu tenho certeza hoje, é que eu quero viver muita coisa ainda ao seu lado, aprendendo com os meus erros.
+ 
+Quero criar memórias novas com você, boas o suficiente pra deixar as ruins pra trás, sem apagar o aprendizado.
+ 
 Você é essencial na minha vida. ♥`,
-
+ 
 `Amor,
-
+ 
 Às vezes eu fico pensando como seria minha vida se eu não tivesse te conhecido…
-
+ 
 E sinceramente? Eu nem gosto de imaginar.
-
-Porque você se tornou uma parte tão grande de mim… que não faz sentido pensar em uma vida sem você.
-
-Você não é só alguém que passou.
-
-Você é alguém que ficou.
-
-E que eu quero que continue ficando… pra sempre. ♥`,
-
+ 
+Por isso eu luto tanto pra consertar o que eu estraguei.
+ 
+Porque você não é só alguém que passou.
+ 
+Você é alguém que eu quero que fique. ♥`,
+ 
 `Letícia,
-
+ 
 Eu amo você nos detalhes.
-
+ 
 Nos pequenos momentos.
-
+ 
 Nas conversas simples.
-
-Nos olhares.
-
-Porque é nesses detalhes que eu vejo o quanto você é incrível.
-
-E é nesses detalhes que eu percebo o quanto eu sou apaixonado por você.
-
-Um amor calmo, mas ao mesmo tempo intenso.
-
-E completamente verdadeiro. ♥`,
-
+ 
+E foi justamente por não prestar atenção nesses detalhes que eu acabei te machucando.
+ 
+Eu vi isso. E vou mudar.
+ 
+Um amor calmo, mas intenso, e completamente verdadeiro… é isso que eu quero te dar. ♥`,
+ 
 `Meu amor,
-
-Eu não prometo que tudo vai ser sempre perfeito…
-
-Mas eu prometo que vou estar com você em tudo.
-
-Vou te apoiar, te respeitar, te cuidar e te amar do jeito mais sincero que eu puder.
-
-Porque você merece um amor de verdade.
-
+ 
+Eu não prometo que tudo vai ser sempre perfeito, principalmente depois do que aconteceu.
+ 
+Mas eu prometo que vou estar com você em tudo, com mais cuidado, mais atenção e mais respeito do que antes.
+ 
+Você merece um amor de verdade.
+ 
 E é exatamente isso que eu sinto por você. ♥`,
-
+ 
 `Amor,
-
+ 
 Você é, sem dúvida nenhuma, a melhor coisa que já aconteceu na minha vida.
-
-E eu não tô falando isso por falar…
-
-Eu sinto isso de verdade.
-
-No fundo.
-
-Com toda certeza.
-
-E enquanto eu puder… eu vou continuar te amando, te escolhendo e querendo você comigo. ♥`,
-
+ 
+Foi por isso que perceber que eu te machuquei me doeu tanto.
+ 
+Eu não quero ser motivo de tristeza pra você… quero ser motivo de paz.
+ 
+Enquanto eu puder, vou continuar te amando e me esforçando por você. ♥`,
+ 
 `Meu amor,
-
-Às vezes eu me pego pensando em como tudo começou… e em como, sem perceber, você se tornou tudo pra mim.
-
-Não foi de repente, não foi forçado… foi acontecendo aos poucos, de um jeito leve, mas ao mesmo tempo intenso.
-
-Quando eu vi, já era você em tudo.
-
-Nos meus pensamentos antes de dormir, nas coisas que eu quero viver, nos planos que eu começo a imaginar.
-
-E hoje eu tenho certeza de uma coisa: eu não quero um futuro bonito… eu quero um futuro com você.
-
+ 
+Às vezes eu me pego pensando em como tudo começou…
+ 
+E em como, sem perceber, você se tornou tudo pra mim.
+ 
+Hoje eu tenho certeza de uma coisa: eu não quero um futuro bonito… eu quero um futuro com você, mesmo que precise reconstruir a confiança primeiro.
+ 
 Porque sem você, nada realmente faz sentido. ♥`,
-
+ 
 `Letícia,
-
-Tem algo em você que me acalma de um jeito que eu nunca senti antes.
-
-Mesmo nos dias mais difíceis, só de pensar em você, tudo parece ficar mais leve.
-
-Você virou meu ponto de equilíbrio, minha paz no meio do caos.
-
-E eu nem sei como agradecer por isso… por você existir, por estar comigo, por me permitir fazer parte da sua vida.
-
-Eu só sei que vou fazer de tudo pra ser alguém que você tenha orgulho de amar.
-
-Porque você merece o melhor… e eu quero ser isso pra você. ♥`,
-
+ 
+Eu queria pedir desculpas não só pelo que eu fiz…
+ 
+Mas por não ter percebido antes o quanto isso te doeu.
+ 
+Eu devia ter sido mais presente. Mais sensível ao que você estava sentindo.
+ 
+Perdão por essa falta de cuidado.
+ 
+Vou fazer diferente. ♥`,
+ 
 `Meu amor,
-
+ 
 Eu amo o jeito que você faz coisas simples se tornarem especiais.
-
-Uma conversa, um olhar, um momento qualquer… tudo com você ganha um significado diferente.
-
-E é nisso que eu percebo o quanto você é única.
-
-Porque não é sobre grandes coisas… é sobre como você transforma o pequeno em algo inesquecível.
-
-E eu quero viver muitos desses momentos ao seu lado ainda.
-
-Momentos simples… mas que com você se tornam tudo. ♥`,
-
+ 
+Um olhar, um momento qualquer… tudo com você ganha um significado diferente.
+ 
+E é por isso que eu não quero perder isso por causa de um erro meu.
+ 
+Eu vou lutar pra manter esse brilho entre a gente. ♥`,
+ 
 `Amor,
-
+ 
 Se tem uma coisa que eu nunca vou me cansar, é de te escolher.
-
-Te escolher nos dias fáceis e nos difíceis.
-
-Te escolher quando tudo estiver bem… e quando nada parecer dar certo.
-
-Porque amar você não é só sentimento, é decisão também.
-
-E eu decido todos os dias continuar aqui, com você, por você.
-
-Porque você vale cada escolha que eu faço. ♥`,
-
+ 
+Todos os dias.
+ 
+Principalmente nos dias difíceis, como esse que a gente está atravessando.
+ 
+Amar você não é só sentimento, é decisão também.
+ 
+E eu decido, todos os dias, continuar aqui, por você. ♥`,
+ 
 `Letícia,
-
-Eu não sei se você tem noção do quanto você é importante pra mim.
-
-Do quanto você faz diferença na minha vida.
-
+ 
+Eu não sei se você tem noção do quanto você é importante pra mim…
+ 
 Do quanto o meu dia muda completamente dependendo de como você está.
-
-Você não é só alguém que eu amo… você é alguém que eu preciso.
-
-Preciso do seu carinho, da sua presença, do seu jeito.
-
-E é por isso que eu cuido tanto desse amor… porque eu não quero perder você nunca. ♥`,
-
+ 
+Foi exatamente por isso que ver você triste por minha causa me partiu.
+ 
+Eu quero cuidar desse amor com mais zelo daqui pra frente. ♥`,
+ 
 `Meu amor,
-
+ 
 Eu amo pensar no futuro… mas só quando você está nele.
-
-Porque todos os meus planos, sonhos e vontades agora têm você envolvida.
-
-Eu penso em viagens, momentos, conquistas… e em todos eles, é você ao meu lado.
-
-E isso não me assusta… pelo contrário.
-
-Isso me dá uma certeza muito forte de que eu estou no caminho certo.
-
-Porque estar com você é a melhor direção que a vida poderia me dar. ♥`,
-
+ 
+Eu sei que agora talvez esteja mais difícil pensar em futuro, por causa do que eu fiz.
+ 
+Mas eu vou ter paciência, e vou esperar você se sentir segura de novo.
+ 
+Estar com você é a melhor direção que a vida poderia me dar. ♥`,
+ 
 `Amor,
-
-Você me ensinou que amar não é só sentir… é cuidar.
-
-É prestar atenção nos detalhes, é se importar de verdade, é querer ver o outro bem.
-
-E desde que você entrou na minha vida, eu aprendi a amar de um jeito muito mais bonito.
-
-Mais leve, mais verdadeiro.
-
-E tudo isso é por sua causa.
-
-Você me fez melhor… e eu nunca vou esquecer isso. ♥`,
-
+ 
+Você me ensinou que amar não é só sentir, é cuidar.
+ 
+Eu falhei nisso uma vez, e isso me ensinou uma lição que eu não vou esquecer: cuidado não é opcional quando se ama de verdade.
+ 
+Você me fez melhor…
+ 
+E eu não vou desperdiçar essa chance de mostrar isso. ♥`,
+ 
 `Letícia,
-
-Se eu pudesse te dar uma coisa nessa vida, eu te daria a capacidade de se ver com os meus olhos.
-
-Pra você entender o quanto você é incrível.
-
-O quanto você é forte, linda, especial.
-
-Porque às vezes eu acho que você não faz ideia do tamanho da pessoa que você é.
-
-E eu tenho muito orgulho de amar alguém como você. ♥`,
-
+ 
+Se eu pudesse te dar uma coisa nessa vida, eu te daria a capacidade de se ver com os meus olhos…
+ 
+Pra entender o quanto você é incrível, e o quanto merece ser bem tratada.
+ 
+Eu tenho muito orgulho de amar alguém como você.
+ 
+E muita vergonha de ter falhado com você uma vez. ♥`,
+ 
 `Meu amor,
-
+ 
 Eu não preciso de motivos grandes pra te amar.
-
-Porque até nos menores detalhes, eu encontro razões.
-
-No seu jeito de falar, no seu jeito de rir, no jeito que você me olha…
-
-Tudo em você me conquista um pouco mais todos os dias.
-
-E é isso que torna tudo tão especial.
-
-Não é algo passageiro… é algo que cresce, que evolui, que fica cada vez mais forte. ♥`,
-
+ 
+Até nos menores detalhes, eu encontro razões.
+ 
+E é justamente por amar os detalhes que eu quero prestar mais atenção neles daqui pra frente…
+ 
+Pra nunca mais deixar passar algo que possa te machucar. ♥`,
+ 
 `Amor,
-
-Eu quero estar com você nos momentos bons… mas principalmente nos difíceis.
-
-Quero ser a pessoa que vai segurar sua mão quando tudo parecer pesado.
-
-Que vai te lembrar da sua força quando você esquecer.
-
-Que vai ficar, mesmo quando seria mais fácil ir embora.
-
-Porque é isso que você merece.
-
-Alguém que não desiste… alguém que luta… alguém que ama de verdade. ♥`,
-
+ 
+Eu quero estar com você nos momentos bons, mas principalmente nos difíceis…
+ 
+Incluindo esse que a gente está vivendo agora por minha causa.
+ 
+Quero ser a pessoa que vai segurar sua mão quando tudo parecer pesado, mesmo quando o peso for culpa minha.
+ 
+Porque é isso que você merece: alguém que não desiste. ♥`,
+ 
 `Letícia,
-
-Você é o tipo de pessoa que deixa marcas… mas marcas boas.
-
+ 
+Você é o tipo de pessoa que deixa marcas boas…
+ 
 Daquelas que transformam, que ensinam, que fazem crescer.
-
-E eu sei que, independente de qualquer coisa, você já mudou minha vida pra sempre.
-
-Mas eu não quero que seja só uma marca.
-
-Eu quero que seja uma história inteira.
-
-Uma vida inteira ao seu lado. ♥`,
-
+ 
+Eu não quero que o que eu fiz vire uma marca ruim na nossa história.
+ 
+Eu quero que vire só mais uma prova de que a gente sabe superar coisas juntos.
+ 
+Uma vida inteira ao seu lado… é isso que eu quero. ♥`,
+ 
 `Meu amor,
-
-Eu amo você até nos momentos em que você acha que não merece ser amada.
-
-Porque eu conheço você de verdade.
-
-Conheço sua essência, seu coração, sua verdade.
-
-E é exatamente isso que me faz te amar tanto.
-
-Não é perfeição… é quem você é de verdade.
-
-E pra mim, isso já é tudo. ♥`,
-
+ 
+Eu amo você até nos momentos em que talvez você não se sinta merecedora de ser amada…
+ 
+Principalmente depois de ter sido magoada por mim.
+ 
+Mas eu conheço você de verdade, e é exatamente por isso que eu não desisto do nosso amor.
+ 
+Você merece isso, e muito mais. ♥`,
+ 
 `Amor,
-
+ 
 Você é a pessoa que eu quero contar tudo.
-
-As coisas boas, as ruins, as aleatórias, as importantes.
-
-Porque compartilhar a vida com você faz tudo ficar melhor.
-
-E eu nunca imaginei que encontraria alguém assim.
-
-Mas encontrei.
-
-E é você. ♥`,
-
+ 
+As coisas boas, as ruins, as difíceis de admitir… como o meu erro.
+ 
+Compartilhar a vida com você, mesmo os momentos difíceis, faz tudo ficar melhor…
+ 
+Porque eu sei que é com você que eu quero crescer. ♥`,
+ 
 `Letícia,
-
+ 
 Eu não sei o que o futuro reserva…
-
-Mas eu sei de uma coisa: eu quero você nele.
-
-Quero construir, aprender, errar, acertar… tudo com você.
-
-Porque não faz sentido viver coisas boas sem poder dividir com quem eu amo.
-
-E você é a pessoa com quem eu quero dividir tudo. ♥`,
-
+ 
+Mas eu sei de uma coisa: eu quero você nele, e quero merecer estar nele.
+ 
+Quero construir, aprender, errar menos, acertar mais, tudo com você.
+ 
+Você é a pessoa com quem eu quero dividir tudo… inclusive os meus erros e o meu crescimento. ♥`,
+ 
 `Meu amor,
-
-Se amar você fosse um risco, eu correria ele mil vezes.
-
-Porque cada momento ao seu lado vale a pena.
-
-Cada sorriso seu, cada abraço, cada palavra.
-
-Tudo com você é especial.
-
-E eu nunca vou me cansar disso. ♥`
+ 
+Se amar você fosse um risco, eu correria ele mil vezes…
+ 
+Mesmo sabendo que às vezes eu vou errar no caminho.
+ 
+O que eu não posso fazer é parar de tentar.
+ 
+Cada momento ao seu lado vale o esforço de ser melhor. ♥`,
+ 
+`Amor,
+ 
+Eu queria te dizer que sinto muito, mas não do jeito automático que a gente às vezes fala.
+ 
+Eu sinto muito de verdade, com o peito apertado, sabendo que fui eu quem causou essa dor.
+ 
+Você não merecia isso.
+ 
+Eu vou fazer por merecer sua confiança de volta. ♥`,
+ 
+`Letícia, meu amor,
+ 
+Eu penso em você o tempo todo…
+ 
+Mesmo nos momentos em que eu sei que magoei seu coração.
+ 
+E é justamente esse pensamento constante que me faz ter certeza: eu preciso, e quero, consertar isso.
+ 
+Porque você é importante demais pra mim. ♥`,
+ 
+`Meu amor,
+ 
+Eu não vou te pedir pra esquecer o que aconteceu, porque isso não seria justo com você.
+ 
+Eu só peço a chance de te mostrar, com tempo e com atitude, que eu aprendi…
+ 
+E que o meu amor por você é maior do que o meu erro. ♥`,
+ 
+`Amor,
+ 
+Tem coisas que a gente só aprende doendo…
+ 
+E essa foi uma delas.
+ 
+Eu aprendi, na dor de te ver triste, o quanto eu preciso cuidar melhor do que sinto por você e de como eu demonstro isso.
+ 
+Perdão, Letícia.
+ 
+Eu te amo. ♥`,
+ 
+`Letícia,
+ 
+Eu queria que cada uma dessas cartas fosse um lembrete…
+ 
+De que eu te amo.
+ 
+De que eu errei.
+ 
+E de que eu quero, todos os dias, ser alguém em quem você pode confiar de novo. ♥`,
+ 
+`Meu amor,
+ 
+Você merece alguém que celebra você todos os dias, não só nos dias fáceis.
+ 
+Eu quero ser essa pessoa, mesmo tendo falhado uma vez.
+ 
+Eu vou te mostrar, com paciência, que eu aprendi o tamanho do que você vale. ♥`,
+ 
+`Amor,
+ 
+Eu sei que confiança não volta de uma hora pra outra, e eu não espero isso de você.
+ 
+O que eu posso prometer é consistência…
+ 
+Nos meus atos, nas minhas palavras, no meu cuidado com você, todos os dias, até você sentir que pode confiar em mim de novo. ♥`,
+ 
+`Letícia, meu amor,
+ 
+Cada dia que passa eu tenho mais clareza do quanto eu te amo…
+ 
+E do quanto eu preciso ser mais cuidadoso com esse amor.
+ 
+Obrigado por me dar espaço pra mostrar isso.
+ 
+Eu não vou desperdiçar. ♥`,
+ 
+`Meu amor,
+ 
+Eu queria ser o motivo dos seus sorrisos, não das suas lágrimas.
+ 
+E eu sei que uma vez eu fui o contrário disso.
+ 
+Mas eu vou trabalhar, todos os dias, pra voltar a ser aquele motivo de alegria que eu sei que posso ser pra você. ♥`,
+ 
+`Amor,
+ 
+Se um pedido de desculpas pudesse apagar a dor, eu diria mil vezes…
+ 
+Mas eu sei que não funciona assim.
+ 
+Então eu vou fazer o que realmente importa: mudar, prestar atenção, cuidar.
+ 
+Você merece isso de mim. ♥`,
+ 
+`Letícia,
+ 
+Eu amo o som da sua risada, o jeito que seus olhos brilham quando você está feliz…
+ 
+E dói saber que, por um tempo, eu fui a razão desse brilho sumir.
+ 
+Eu quero trazer esse brilho de volta, com paciência e com amor verdadeiro. ♥`,
+ 
+`Meu amor,
+ 
+Eu sei que palavras bonitas não valem nada sem atitude por trás.
+ 
+Por isso, mais do que essas cartas, eu quero te mostrar no dia a dia que eu mudei.
+ 
+Você vai ver, no tempo certo, que esse amor é real, e que eu aprendi. ♥`,
+ 
+`Amor,
+ 
+Hoje, no dia 76, eu quero te agradecer por não ter desistido de mim, mesmo depois de eu ter errado.
+ 
+Isso não é pra mim motivo de acomodação, é motivo de gratidão e de compromisso…
+ 
+Eu vou honrar essa chance que você me deu. ♥`,
+ 
+`Letícia, meu amor,
+ 
+Eu queria que você soubesse que, mesmo nos meus piores momentos, o meu amor por você nunca diminuiu.
+ 
+O que faltou foi cuidado, não amor.
+ 
+E cuidado é algo que eu posso, e vou, melhorar.
+ 
+Te amo. ♥`,
+ 
+`Meu amor,
+ 
+Cada dia que a gente supera junto, mesmo os difíceis, fortalece o que a gente tem.
+ 
+Eu não trocaria essa jornada, com seus erros e acertos, por nada.
+ 
+Porque no fim, é com você que eu quero estar. ♥`,
+ 
+`Amor,
+ 
+Eu não sou perfeito, e eu errei feio uma vez.
+ 
+Mas eu sou alguém que se importa, que aprende, e que quer construir algo verdadeiro com você.
+ 
+Obrigado por me dar a chance de provar isso. ♥`,
+ 
+`Letícia,
+ 
+Você merece um amor tranquilo, sem sustos, sem dor desnecessária.
+ 
+Eu vou fazer de tudo pra te dar isso daqui pra frente.
+ 
+O erro que eu cometi me ensinou o tamanho da responsabilidade que é amar alguém como você. ♥`,
+ 
+`Meu amor,
+ 
+Eu queria te lembrar, nesse dia 76, que apesar de tudo que aconteceu, o que eu sinto por você continua sendo a coisa mais verdadeira da minha vida.
+ 
+Vamos construir, juntos, um caminho mais forte a partir daqui. ♥`,
+ 
+`Amor,
+ 
+Eu sei que magoei você, e essa é uma verdade que eu não vou fugir.
+ 
+Mas eu também sei que o nosso amor é maior do que esse erro, se a gente cuidar dele com carinho.
+ 
+Eu quero cuidar. Junto com você. ♥`,
+ 
+`Letícia, meu amor,
+ 
+Obrigado por me dar a oportunidade de mostrar quem eu realmente sou…
+ 
+Alguém que erra, sim, mas que também luta pra consertar e ser melhor por você.
+ 
+Eu te amo, hoje e sempre. ♥`,
+ 
+`Meu amor,
+ 
+Se eu pudesse voltar no tempo, eu teria sido mais atento, mais gentil, mais presente.
+ 
+Não posso voltar, mas posso ser assim de agora em diante.
+ 
+Você merece esse cuidado todos os dias, não só depois de um erro. ♥`,
+ 
+`Amor,
+ 
+Eu escolho você, com todos os meus erros e aprendizados, todos os dias.
+ 
+Escolho aprender com o que passou.
+ 
+Escolho cuidar melhor.
+ 
+Escolho te amar de um jeito mais consciente e mais presente. ♥`,
+ 
+`Letícia,
+ 
+Eu sei que ainda tem trabalho a fazer pra reconstruir o que eu abalei…
+ 
+E eu estou disposto a fazer esse trabalho, com paciência e sem pressa, no seu tempo. ♥`,
+ 
+`Meu amor,
+ 
+Você é a pessoa que me faz querer ser melhor, não por obrigação, mas porque eu vejo o quanto você merece o meu melhor.
+ 
+Foi isso que eu esqueci por um momento…
+ 
+E é isso que eu não vou mais esquecer. ♥`,
+ 
+`Amor,
+ 
+Eu penso em tudo que a gente já viveu nesses 76 dias, os bons e os difíceis…
+ 
+E sinto que cada um deles me ensinou algo sobre como amar você direito.
+ 
+Obrigado por essa jornada, mesmo com os tropeços. ♥`,
+ 
+`Letícia, meu amor,
+ 
+Eu não quero só ser perdoado.
+ 
+Eu quero merecer o seu perdão, com atitude, com tempo, com carinho verdadeiro.
+ 
+Você vale todo esse esforço, e muito mais. ♥`,
+ 
+`Meu amor,
+ 
+Hoje eu olho pra trás e vejo o quanto cresci…
+ 
+Mesmo que tenha sido através de um erro que eu não tenho orgulho de ter cometido.
+ 
+O que importa agora é o que eu faço daqui pra frente, e eu escolho fazer isso com você, cuidando de você. ♥`,
+ 
+`Amor,
+ 
+Essas 76 cartas são só uma pequena forma de te mostrar o que eu sinto: amor de verdade, arrependimento sincero, e vontade genuína de ser melhor pra você, todos os dias que vierem. ♥`,
+ 
+`Letícia, meu amor,
+ 
+76 dias… 76 cartas…
+ 
+E um só sentimento por trás de todas elas: eu te amo, eu errei, e eu quero passar o resto do meu tempo mostrando que aprendi.
+ 
+Obrigado por cada dia, por cada chance, por cada "eu ainda estou aqui" que você me deu.
+ 
+Eu não vou desperdiçar isso.
+ 
+Te amo, hoje e sempre. ♥`
 
 
 ];
